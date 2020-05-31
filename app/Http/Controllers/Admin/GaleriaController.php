@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
+use App\models\Galeria;
 class GaleriaController extends Controller
 {
     /**
@@ -14,7 +14,7 @@ class GaleriaController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.galeria.index');
     }
 
     /**

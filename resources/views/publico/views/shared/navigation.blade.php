@@ -1,4 +1,6 @@
-    <!-- Navigation -->
+ 
+  <link href="{{'css/app.css'}}" rel="stylesheet" type="text/css">
+ <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div class="container">
       
@@ -35,3 +37,4 @@
         </div>
       </div>
     </nav>
+    <script src="{{mix('js/app.js')}}"></script>

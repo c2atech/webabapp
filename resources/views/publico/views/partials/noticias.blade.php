@@ -13,29 +13,30 @@
 
 
     <div class="row row-cols-1 row-cols-md-3">
-    @forelse ($posts as $post)
-    <div class="'">
-      <div class="col mb-4">
-        <div class="card h-100">
-        <img height="350" width="350" src="{{asset($post->imagem)}}" alt="Imagem do Post">
-          <div class="card-body">
-          <a href="{{ url("/publico/posts/{$post->id}") }}" class="btn btn-xs btn-success">
-              <h5 class="card-title">
-              {{ $post->title }}
-              </h5>
-            </a>
-            <p class="card-text">{{ str_limit($post->body, 60) }}</p>
-          </div>
-          <div class="card-footer">
-            <small class="text-muted">Categoria: {{ $post->category->name }}</small>
+      @forelse ($posts as $post)
+      <div class="'">
+        <div class="col mb-4">
+          <div class="card h-100">
+            <img height="350" width="350" src="{{asset($post->imagem)}}" alt="Imagem do Post">
+            <div class="card-body">
+              <a href="{{ url("/publico/posts/{$post->id}") }}" >
+                <h5 class="card-title">
+                  {{ $post->title }}
+                </h5>
+              </a>
+              <p class="card-text">{{ str_limit($post->body, 60) }}</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">Categoria: {{ $post->category->name }}</small>
+            </div>
           </div>
         </div>
-      </div>
 
-    </div>
-    @empty
-    <tr>
-      <td colspan="5">Não encontrado</td>
-    </tr>
-    @endforelse
+      </div>
+      @empty
+      <tr>
+        <td colspan="5">Não encontrado</td>
+      </tr>
+      @endforelse
+
 </section>

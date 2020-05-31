@@ -13,6 +13,8 @@
 
 //Route::get('/', 'BlogController@index');
 Route::get('/', 'publicController@index');
+Route::get('/galeria', 'publicController@galeria');
+Route::get('adm/galeria', 'Admin\GaleriaController@index');
 Route::get('/posts/{post}', 'BlogController@post');
 Route::post('/posts/{post}/comment', 'BlogController@comment')->middleware('auth');
 
