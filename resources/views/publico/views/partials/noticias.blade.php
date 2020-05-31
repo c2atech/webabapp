@@ -12,9 +12,9 @@
     </div>
 
 
-
-    @forelse ($posts as $post)
     <div class="row row-cols-1 row-cols-md-3">
+    @forelse ($posts as $post)
+    <div class="'">
       <div class="col mb-4">
         <div class="card h-100">
         <img height="350" width="350" src="{{asset($post->imagem)}}" alt="Imagem do Post">

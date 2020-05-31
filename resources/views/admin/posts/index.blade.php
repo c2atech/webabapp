@@ -31,7 +31,7 @@
                             <tbody>
                                 @forelse ($posts as $post)
                                     <tr>
-                                        <td><img height="250" src="{{asset($post->imagem)}}" alt=""></td>
+                                        <td><img height="100" width="100" src="{{asset($post->imagem)}}" alt=""></td>
                                         <td>{{ $post->title }}</td>
                                         <td>{{ str_limit($post->body, 60) }}</td>
                                         <td>{{ $post->user->name }}</td>
