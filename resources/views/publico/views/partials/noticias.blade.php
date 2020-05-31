@@ -12,16 +12,16 @@
     </div>
 
 
-
-    @forelse ($posts as $post)
     <div class="row row-cols-1 row-cols-md-3">
+      @forelse ($posts as $post)
+
       <div class="col mb-4">
         <div class="card h-100">
-        <img height="350" width="350" src="{{asset($post->imagem)}}" alt="Imagem do Post">
+          <img src="{{asset($post->imagem)}}" class="card-img-top" alt="Imagem do Post">
           <div class="card-body">
-            <a class="portfolio-link" data-toggle="modal" href="#noticia1">
+            <a class="portfolio-link" data-toggle="modal" href="#noticia1 {{$post->id}}">
               <h5 class="card-title">
-              {{ $post->title }}
+                {{ $post->title }}
               </h5>
             </a>
             <p class="card-text">{{ str_limit($post->body, 60) }}</p>
@@ -32,10 +32,10 @@
         </div>
       </div>
 
+      @empty
+      <tr>
+        <td colspan="5">Não encontrado</td>
+      </tr>
+      @endforelse
     </div>
-    @empty
-    <tr>
-      <td colspan="5">Não encontrado</td>
-    </tr>
-    @endforelse
 </section>
