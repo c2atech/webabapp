@@ -11,7 +11,7 @@
                         <h2>
                             Postagens
 
-                            <a href="{{ url('admin/posts/create') }}" class="btn btn-default pull-right">Nova Postagem</a>
+                            <a href="{{ url('admin/posts/create') }}" class="btn btn-default pull-right">Adicinar Imagem</a>
                         </h2>
                     </div>
 
@@ -31,8 +31,6 @@
                                        
                                         <td>
                                           
-                                            <a href="#" class="btn btn-xs btn-success">Ver</a>
-                                            <a href="#") }}" class="btn btn-xs btn-info">Editar</a>
                                             <a href="#" data-method="DELETE" data-token="{{ csrf_token() }}" data-confirm="Are you sure?" class="btn btn-xs btn-danger">Deletar</a>
                                         </td>
                                     </tr>
