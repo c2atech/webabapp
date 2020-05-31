@@ -9,9 +9,9 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h2>
-                            Postagens
+                         Galeria de Fotos
 
-                            <a href="{{ url('admin/posts/create') }}" class="btn btn-default pull-right">Adicinar Imagem</a>
+                            <a href="{{ url('adm/galeria/form') }}" class="btn btn-default pull-right">Adicinar Imagem</a>
                         </h2>
                     </div>
 

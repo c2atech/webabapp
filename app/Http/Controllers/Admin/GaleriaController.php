@@ -16,7 +16,9 @@ class GaleriaController extends Controller
     {
         return view('admin.galeria.index');
     }
-
+    public function form(){
+        return view('admin.galeria.create-galeria');
+    }
     /**
      * Show the form for creating a new resource.
      *
