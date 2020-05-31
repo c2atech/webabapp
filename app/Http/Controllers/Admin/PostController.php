@@ -46,19 +46,23 @@ class PostController extends Controller
     public function store(PostRequest $request )
     {
 
-        $post = Post::create([
-            'title'       => $request->title,
-            'body'        => $request->body,
-            'category_id' => $request->category_id
-        ]);
+        $dados = $request->all();
+        //dd($dados);    motrarar os valores que está pegando atraves do 'dados'
 
-       
-        $tagsId = collect($request->tags)->map(function($tag) {
-            return Tag::firstOrCreate(['name' => $tag])->id;
-        });
+                 //tratando a imagem
+        if ($request->hasFile('imagem')) {
+          $imagem = $request->file('imagem');
 
-        $post->tags()->attach($tagsId);
-        flash()->overlay('Post created successfully.');
+          $num = rand(1111,2222);   //gerando um numero randomico para servir como nome da imagem no banco de dados
+          $dir = "img/postagem/";               //diretorio onde ira salvar a imagem
+          $extensao = $imagem->guessClientExtension();  //extensao da imagem
+          $nomeimagem = "imagem_".$num.".".$extensao;   //nome da imagem
+          $imagem->move($dir,$nomeimagem);     //movendo imagem para um diretorio
+          $dados['imagem'] = $dir."/".$nomeimagem;  //caminho da imagem para salvar no banco
+        }
+        Post::create($dados); //salvando tudo no banco de dados
+
+          //redirecionando para a pagina 'Posts'
 
         return redirect('/admin/posts');
     }

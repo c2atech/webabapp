@@ -18,6 +18,7 @@
                         <table class="table">
                             <thead>
                                 <tr>
+                                    <th>Imagem</th>
                                     <th>Titulo</th>
                                     <th>Descrção</th>
                                     <th>Autor</th>
@@ -30,6 +31,7 @@
                             <tbody>
                                 @forelse ($posts as $post)
                                     <tr>
+                                        <td><img height="250" src="{{asset($post->imagem)}}" alt=""></td>
                                         <td>{{ $post->title }}</td>
                                         <td>{{ str_limit($post->body, 60) }}</td>
                                         <td>{{ $post->user->name }}</td>
