@@ -1,4 +1,13 @@
 
+<div class="form-group{{ $errors->has('imagem') ? ' has-error' : '' }}">
+    {!! Form::label('imagem', 'imagem', ['class' => 'col-md-2 control-label']) !!}
+
+    <div class="col-md-8">
+
+    <input type="file" class="form-control-file" id="exampleFormControlFile1" name="imagem">
+
+    </div>
+</div>
 
 
 <div class="form-group{{ $errors->has('title') ? ' has-error' : '' }}">
