@@ -11,26 +11,31 @@
       </div>
     </div>
 
-  
-    
-     
-          <div class="row row-cols-1 row-cols-md-3">
-            <div class="col mb-4">
-              <div class="card h-100">
-                <img src="assoc/portfolio/noticia.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <a class="portfolio-link" data-toggle="modal" href="#noticia1">
-                    <h5 class="card-title">
-                      titulo
-                    </h5>
-                  </a>
-                  <p class="card-text">Descrição</p>
-                </div>
-                <div class="card-footer">
-                  <small class="text-muted">Criação</small>
-                </div>
-              </div>
-            </div>
 
-  </div>
+
+    @forelse ($posts as $post)
+    <div class="row row-cols-1 row-cols-md-3">
+      <div class="col mb-4">
+        <div class="card h-100">
+        <img height="350" width="350" src="{{asset($post->imagem)}}" alt="Imagem do Post">
+          <div class="card-body">
+            <a class="portfolio-link" data-toggle="modal" href="#noticia1">
+              <h5 class="card-title">
+              {{ $post->title }}
+              </h5>
+            </a>
+            <p class="card-text">{{ str_limit($post->body, 60) }}</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Categoria: {{ $post->category->name }}</small>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    @empty
+    <tr>
+      <td colspan="5">Não encontrado</td>
+    </tr>
+    @endforelse
 </section>
