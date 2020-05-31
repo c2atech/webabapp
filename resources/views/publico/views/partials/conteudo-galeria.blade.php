@@ -1,5 +1,8 @@
-    <!-- Services -->
-  <section class="page-section" id="services">
+@include("publico.views.shared.navigation")
+ 
+<link href="{{'css/app.css'}}" rel="stylesheet" type="text/css"> 
+  <!-- Services -->
+    <section class="page-section" id="services">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
@@ -43,3 +46,4 @@
       </div>
     </a>
   </section>
+  <script src="{{mix('js/app.js')}}"></script>

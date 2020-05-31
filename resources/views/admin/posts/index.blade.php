@@ -24,7 +24,6 @@
                                     <th>Autor</th>
                                     <th>Categoria</th>
                                     <th>Tags</th>
-                                    <th>publico</th>
                                     <th>Ação</th>
                                 </tr>
                             </thead>
@@ -37,7 +36,6 @@
                                         <td>{{ $post->user->name }}</td>
                                         <td>{{ $post->category->name }}</td>
                                         <td>{{ $post->tags->implode('name', ', ') }}</td>
-                                        <td>{{ $post->published }}</td>
                                         <td>
                                             @if (Auth::user()->is_admin)
                                                 @php
@@ -47,7 +45,6 @@
                                                         $label = 'Publish';
                                                     }
                                                 @endphp
-                                                <a href="{{ url("/admin/posts/{$post->id}/publish") }}" data-method="PUT" data-token="{{ csrf_token() }}" data-confirm="Are you sure?" class="btn btn-xs btn-warning">{{ $label }}</a>
                                             @endif
                                             <a href="{{ url("/admin/posts/{$post->id}") }}" class="btn btn-xs btn-success">Ver</a>
                                             <a href="{{ url("/admin/posts/{$post->id}/edit") }}" class="btn btn-xs btn-info">Editar</a>

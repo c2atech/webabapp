@@ -13,6 +13,9 @@
 
 //Route::get('/', 'BlogController@index');
 Route::get('/', 'publicController@index');
+Route::get('/galeria', 'publicController@galeria');
+Route::get('adm/galeria', 'Admin\GaleriaController@index');
+Route::get('adm/galeria/form', 'Admin\GaleriaController@form');
 Route::get('/posts/{post}', 'BlogController@post');
 Route::post('/posts/{post}/comment', 'BlogController@comment')->middleware('auth');
 
@@ -20,7 +23,7 @@ Auth::routes();
 Route::get('/profile', 'Auth\\ProfileController@index')->middleware('auth');
 
 Route::get('/home', 'HomeController@index');
-Route::get('/publico', 'Admin\PostController@publicoindex');
+Route::get('/publico/posts', 'Admin\PostController@lpostagens');
 
 
 
