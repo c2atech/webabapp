@@ -19,7 +19,7 @@
         <div class="card h-100">
         <img height="350" width="350" src="{{asset($post->imagem)}}" alt="Imagem do Post">
           <div class="card-body">
-            <a class="portfolio-link" data-toggle="modal" href="#noticia1">
+          <a href="{{ url("/publico/posts/{$post->id}") }}" class="btn btn-xs btn-success">
               <h5 class="card-title">
               {{ $post->title }}
               </h5>

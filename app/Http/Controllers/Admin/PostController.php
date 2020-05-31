@@ -80,6 +80,13 @@ class PostController extends Controller
         return view('admin.posts.show', compact('post'));
     }
 
+    public function lpostagens(Post $post)
+    {
+        $post = $post->load(['user', 'category', 'tags', 'comments']);
+
+        return view('publico.views.partials.conteudo-noticia', compact('post'));
+    }
+
     /**
      * Show the form for editing the specified resource.
      *

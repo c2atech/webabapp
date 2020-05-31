@@ -15,7 +15,7 @@
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
                   <h2 class="text-uppercase">
-                   titulo
+                  
                   </h2>
                   <p class="item-intro text-muted">Subtitulo</p>
                   <img class="img-fluid d-block mx-auto" src="assoc/portfolio/copaguilherme.jpeg" alt="">

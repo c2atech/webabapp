@@ -20,7 +20,7 @@ Auth::routes();
 Route::get('/profile', 'Auth\\ProfileController@index')->middleware('auth');
 
 Route::get('/home', 'HomeController@index');
-Route::get('/publico', 'Admin\PostController@publicoindex');
+Route::get('/publico/posts', 'Admin\PostController@lpostagens');
 
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'auth'], function() {
     Route::resource('/posts', 'PostController');
