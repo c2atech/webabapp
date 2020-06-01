@@ -1,6 +1,5 @@
 @push('doc_end')
-@include("publico.views.partials.conteudo-noticia")
-@endpush
+
 <!-- Noticias -->
 <section class="page-section" id="noticias">
   <div class="container">
@@ -11,32 +10,34 @@
       </div>
     </div>
 
+    <div class="row row-cols-1 row-cols-md-2">
+    @forelse ($posts as $post)
 
-    <div class="row row-cols-1 row-cols-md-3">
-      @forelse ($posts as $post)
-      <div class="'">
-        <div class="col mb-4">
-          <div class="card h-100">
-            <img height="300" width="300" src="{{asset($post->imagem)}}" alt="Imagem do Post">
-            <div class="card-body">
-              <a href="{{ url("/publico/posts/{$post->id}") }}" >
-                <h5 class="card-title">
-                  {{ $post->title }}
-                </h5>
-              </a>
-              <p class="card-text">{{ str_limit($post->body, 60) }}</p>
-            </div>
-            <div class="card-footer">
-              <small class="text-muted">Categoria: {{ $post->category->name }}</small>
-            </div>
-          </div>
-        </div>
+  <div class="col mb-4 ">
+  <img src="{{asset($post->imagem)}}" width="500" alt="...">
+  </div>
 
-      </div>
-      @empty
-      <tr>
-        <td colspan="5">Não encontrado</td>
-      </tr>
+  <div class="col mb-4 ">
+  <h4 class="section-heading text-uppercase">  {{ $post->title }}</h4>
+  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+
+  </p>
+  
+       
+   <div>
+  <a href="#" class="btn btn-primary btn-md"  role="button" >Ver mais ..</a>
+  </div>
+  
+
+  </div>
+  @empty
+ 
+  
+</div>
+
       @endforelse
+
+  </div>
+
 
 </section>
