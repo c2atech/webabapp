@@ -14,7 +14,7 @@
     @forelse ($posts as $post)
 
   <div class="col mb-4 ">
-  <img src="{{asset($post->imagem)}}" width="500" alt="...">
+  <img src="{{asset($post->imagem)}}" width="350" height="300" alt="...">
   </div>
 
   <div class="col mb-4 ">
