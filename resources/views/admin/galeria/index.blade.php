@@ -25,16 +25,19 @@
                                 </tr>
                             </thead>
                             <tbody>
+                            @forelse ($galeria as $gal)
                                     <tr>
-                                        <td><img height="100" width="100" src="#" alt=""></td>
-                                        <td></td>
-                                       
+                                        <td><img height="100" width="100" src="{{asset($gal->imagem)}}" alt=""></td>
+                                        <td>{{ $gal->titulo }}</td>
                                         <td>
-                                          
-                                            <a href="#" data-method="DELETE" data-token="{{ csrf_token() }}" data-confirm="Are you sure?" class="btn btn-xs btn-danger">Deletar</a>
+                                            <a href="" data-method="DELETE" data-token="{{ csrf_token() }}" data-confirm="Are you sure?" class="btn btn-xs btn-danger">Deletar</a>
                                         </td>
                                     </tr>
-                             
+                                @empty
+                                    <tr>
+                                        <td colspan="5">Não encontrado</td>
+                                    </tr>
+                                @endforelse
                             </tbody>
                         </table>
 

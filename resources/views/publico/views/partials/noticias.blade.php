@@ -17,7 +17,7 @@
       <div class="'">
         <div class="col mb-4">
           <div class="card h-100">
-            <img height="350" width="350" src="{{asset($post->imagem)}}" alt="Imagem do Post">
+            <img height="300" width="300" src="{{asset($post->imagem)}}" alt="Imagem do Post">
             <div class="card-body">
               <a href="{{ url("/publico/posts/{$post->id}") }}" >
                 <h5 class="card-title">

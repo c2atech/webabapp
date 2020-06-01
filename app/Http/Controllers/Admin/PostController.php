@@ -43,26 +43,26 @@ class PostController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(PostRequest $request )
+    public function store(PostRequest $request)
     {
 
         $dados = $request->all();
         //dd($dados);    motrarar os valores que está pegando atraves do 'dados'
 
-                 //tratando a imagem
+        //tratando a imagem
         if ($request->hasFile('imagem')) {
-          $imagem = $request->file('imagem');
+            $imagem = $request->file('imagem');
 
-          $num = rand(1111,2222);   //gerando um numero randomico para servir como nome da imagem no banco de dados
-          $dir = "img/postagem/";               //diretorio onde ira salvar a imagem
-          $extensao = $imagem->guessClientExtension();  //extensao da imagem
-          $nomeimagem = "imagem_".$num.".".$extensao;   //nome da imagem
-          $imagem->move($dir,$nomeimagem);     //movendo imagem para um diretorio
-          $dados['imagem'] = $dir."/".$nomeimagem;  //caminho da imagem para salvar no banco
+            $num = rand(1111, 2222);   //gerando um numero randomico para servir como nome da imagem no banco de dados
+            $dir = "img/postagem/";               //diretorio onde ira salvar a imagem
+            $extensao = $imagem->guessClientExtension();  //extensao da imagem
+            $nomeimagem = "imagem_" . $num . "." . $extensao;   //nome da imagem
+            $imagem->move($dir, $nomeimagem);     //movendo imagem para um diretorio
+            $dados['imagem'] = $dir . "/" . $nomeimagem;  //caminho da imagem para salvar no banco
         }
         Post::create($dados); //salvando tudo no banco de dados
 
-          //redirecionando para a pagina 'Posts'
+        //redirecionando para a pagina 'Posts'
 
         return redirect('/admin/posts');
     }
@@ -95,7 +95,7 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        if($post->user_id != auth()->user()->id && auth()->user()->is_admin == false) {
+        if ($post->user_id != auth()->user()->id && auth()->user()->is_admin == false) {
             flash()->overlay("You can't edit other peoples post.");
             return redirect('/admin/posts');
         }
@@ -124,7 +124,7 @@ class PostController extends Controller
             'category_id' => $request->category_id
         ]);
 
-        $tagsId = collect($request->tags)->map(function($tag) {
+        $tagsId = collect($request->tags)->map(function ($tag) {
             return Tag::firstOrCreate(['name' => $tag])->id;
         });
 
@@ -142,7 +142,7 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        if($post->user_id != auth()->user()->id && auth()->user()->is_admin == false) {
+        if ($post->user_id != auth()->user()->id && auth()->user()->is_admin == false) {
             flash()->overlay("You can't delete other peoples post.");
             return redirect('/admin/posts');
         }

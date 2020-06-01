@@ -9,6 +9,5 @@ class Galeria extends Model
     protected $fillable = [
         'imagem',
         'titulo',
-        'descricao'
     ];
 }

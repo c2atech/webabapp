@@ -15,7 +15,7 @@
 Route::get('/', 'publicController@index');
 Route::get('/galeria', 'publicController@galeria');
 Route::get('adm/galeria', 'Admin\GaleriaController@index');
-Route::get('adm/galeria/form', 'Admin\GaleriaController@form');
+
 Route::get('/posts/{post}', 'BlogController@post');
 Route::post('/posts/{post}/comment', 'BlogController@comment')->middleware('auth');
 
@@ -26,6 +26,9 @@ Route::get('/home', 'HomeController@index');
 Route::get('/publico/posts', 'Admin\PostController@lpostagens');
 
 
+Route::get('adm/galeria/form', 'Admin\GaleriaController@form');
+Route::resource('admin/galeria', 'Admin\GaleriaController');
+
 
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'auth'], function() {
     Route::resource('/posts', 'PostController');
@@ -34,4 +37,5 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'auth
     Route::resource('/tags', 'TagController', ['except' => ['show']]);
     Route::resource('/comments', 'CommentController', ['only' => ['index', 'destroy']]);
     Route::resource('/users', 'UserController', ['middleware' => 'admin', 'only' => ['index', 'destroy']]);
+
 });
