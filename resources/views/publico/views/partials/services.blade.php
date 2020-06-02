@@ -1,4 +1,4 @@
-    <!-- Services -->
+    <!-- Galeria -->
   <section class="page-section" id="services">
     <div class="container">
       <div class="row">
@@ -14,32 +14,36 @@
             <!--  img-fluid dentro da class da imagem para ficar responsivo-->
               <img class="card-img-top" height="270px" src="assoc/capa_galeria/cestabasica.jpeg" alt="Card image cap">
               <div class="card-body">
-                  <h4 class="card-title">Entrega de cestas básicas</h4>
-                  <a href="#" class="card-text"><small class="text-muted">Clique aqui.</small></a>
+                  <h6 class="section-heading text-uppercase">Entrega de cestas básicas</h6>
+                  <a href="#" class="card-text"><small class="text-muted"></small></a>
               </div>
           </div>
 
           <div class="card mb-4">
             <img class="card-img-top" height="270px" src="assoc/capa_galeria/copaguilhermelogo.jpeg" alt="Card image cap">
             <div class="card-body">
-                <h4 class="card-title">Copa Guilherme Beneficente</h4>
-                <a href="#" class="card-text"><small class="text-muted">Clique aqui.</small></a>
+                <h6 class="section-heading text-uppercase">Copa Guilherme Beneficente</h6>
+                <a href="#" class="card-text"><small class="text-muted"></small></a>
             </div>
         </div>
 
          <div class="card mb-4">
               <img class="card-img-top" height="270px" src="assoc/capa_galeria/material.jpeg" alt="Card image cap">
               <div class="card-body">
-                  <h4 class="card-title">Entrega de materiais escolares</h4>
-                  <a href="#" class="card-text"><small class="text-muted">Clique aqui.</small></a>
+                  <h6 class="section-heading text-uppercase">Entrega de materiais escolares</h6>
+                  <a href="#" class="card-text"><small class="text-muted"></small></a>
               </div>
           </div>
 
       </div>
+    
     </div>
-    <a href="{{ url('galeria') }}">
+
     <div class="mx-auto text-center" >
-      <button type="button" class="btn btn-success" >ver mais</button>
-      </div>
-    </a>
+      
+      <p class="section-subheading text-muted">Veja mais sobre todas essas fotos clicando no botão abaixo.</p>
+      
+   
+    <a href="{{ url('galeria') }}" class="btn btn-primary btn-md" role="button">Saiba mais</a>
+    </div>
   </section>
