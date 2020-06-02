@@ -11,32 +11,28 @@
     </div>
 
     <div class="row row-cols-1 row-cols-md-2">
-    @forelse ($posts as $post)
+      @forelse ($posts as $post)
 
-  <div class="col mb-4 ">
-  <img src="{{asset($post->imagem)}}" width="350" height="300" alt="...">
-  </div>
+      <div class="col mb-4 ">
+        <img src="{{asset($post->imagem)}}" width="350" height="300" alt="...">
+      </div>
 
-  <div class="col mb-4 ">
-  <h4 class="section-heading text-uppercase">  {{ $post->title }}</h4>
-  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      <div class="col mb-4 ">
+        <h4 class="section-heading text-uppercase"> {{ $post->title }}</h4>
+        <p> {{str_limit($post->body, 150)}}
 
-  </p>
-  
-       
-   <div>
-  <a href="#" class="btn btn-primary btn-md"  role="button" >Ver mais ..</a>
-  </div>
-  
+        </p>
 
-  </div>
-  @empty
- 
-  
-</div>
 
-      @endforelse
+        <div>
+          <a href="{{ url("/conteudo/posts/{$post->id}") }}" class="btn btn-primary btn-md" role="button">Ver mais ..</a>
+        </div>
 
+
+      </div>
+      @empty
+    </div>
+    @endforelse
   </div>
 
 

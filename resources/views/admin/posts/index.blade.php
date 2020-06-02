@@ -9,7 +9,6 @@
                     <div class="panel-heading">
                         <h2>
                             Postagens
-
                             <a href="{{ url('admin/posts/create') }}" class="btn btn-default pull-right">Nova Postagem</a>
                         </h2>
                     </div>
