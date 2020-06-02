@@ -10,29 +10,26 @@
       </div>
     </div>
 
-    <div class="row row-cols-1 row-cols-md-2">
+    <div class="row">
       @forelse ($posts as $post)
+      <div class="col mb-4 col-sm-10 col-md-6 col-lg-4">
+        <img src="{{asset($post->imagem)}}" width="350" height="200">
 
-      <div class="col mb-4 ">
-        <img src="{{asset($post->imagem)}}" width="350" height="300" alt="...">
       </div>
+      <div class="col-sm-10 col-md-6 col-lg-8 ">
+        <h5 class="section-heading text-uppercase">{{ $post->title }}</h5>
+        <p class="section-subheading text-muted">{{str_limit($post->body, 150)}}</p>
 
-      <div class="col mb-4 ">
-        <h4 class="section-heading text-uppercase"> {{ $post->title }}</h4>
-        <p> {{str_limit($post->body, 150)}}
-
-        </p>
-
-
-        <div>
-          <a href="{{ url("/conteudo/posts/{$post->id}") }}" class="btn btn-primary btn-md" role="button">Ver mais ..</a>
+        <div class="mb-4">
+          <a href="{{ url("/conteudo/posts/{$post->id}") }}" class="btn btn-primary btn-md" role="button">Saiba mais</a>
         </div>
-
 
       </div>
       @empty
     </div>
     @endforelse
+
+
   </div>
 
 
