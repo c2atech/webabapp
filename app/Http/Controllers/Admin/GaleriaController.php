@@ -63,7 +63,7 @@ class GaleriaController extends Controller
         Galeria::create($dados); //salvando tudo no banco de dados
 
 
-        return view('/admin/galeria/index');
+        return route('adm/galeria');
     }
 
     /**

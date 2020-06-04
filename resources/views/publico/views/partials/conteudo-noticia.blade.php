@@ -15,7 +15,7 @@
     <img src="/assoc/ABAPP.png" width="30" height="30" alt="">
   </a>
 
-  <a class="nav-link js-scroll-trigger" href="#">Voltar</a>
+  <a class="nav-link js-scroll-trigger" href="{{url('/')}}">Voltar</a>
 </nav>
 
 
@@ -42,12 +42,14 @@
                   <p >{{$post->body}} </p>
                   <ul class="list-inline">
                   <li>Criado em: <span class="item-intro text-muted">{{$post->created_at}}</span></li>
-                  <li>Categoria: <span class="item-intro text-muted">"chamar no banco de dados a categoria"</span></li>
-                  <li>Autor: <span class="item-intro text-muted">"chamar no banco de dados o autor"</span></li>
+                  <li>Categoria: <span class="item-intro text-muted">{{ $post->category->name }}</span></li>
+                  <li>Autor: <span class="item-intro text-muted">{{ $post->user->name }}</span></li>
                   </ul>
+                  <a href="{{url('/')}}">
                   <button class="btn btn-primary btn-sm" data-dismiss="modal" type="button">
                     <i class="fa fa-times"></i>
-                    Fechar</button>
+                    
+                    Fechar</button></a>
                 </div>
               </div>
             </div>

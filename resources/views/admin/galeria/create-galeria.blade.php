@@ -14,7 +14,7 @@
                         <a href="{{ url('admin/home') }}" class="btn btn-default pull-right">voltar</a>
                     </h2>
                 </div>
-                {!! Form::open(['url' => 'galeria', 'class' => 'form-horizontal', 'role' => 'form', 'enctype' => 'multipart/form-data']) !!}
+                {!! Form::open(['url' => 'admin/galeria', 'class' => 'form-horizontal', 'role' => 'form', 'enctype' => 'multipart/form-data']) !!}
                 <div class="panel-body">
                     <div class="container form-group{{ $errors->has('imagem') ? ' has-error' : '' }}">
                         <div class="col-md-8">
