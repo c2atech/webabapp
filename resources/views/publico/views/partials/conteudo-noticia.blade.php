@@ -37,7 +37,7 @@
                   <h2 class="text-uppercase" style="text-align: center;">
                    {{$post->title}}
                   </h2>
-                  <img width="700" height="430" src="{{asset($post->imagem)}}" alt="">
+                  <img class="container" width="700" height="430" src="{{asset($post->imagem)}}" alt="">
                   <hr>
                   <p >{{$post->body}} </p>
                   <ul class="list-inline">

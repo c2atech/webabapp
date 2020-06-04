@@ -15659,12 +15659,27 @@ header.masthead .intro-text .intro-heading {
 .team-member p {
   margin-top: 0;
 }
+.doe{
+  margin-top: 60px;
+}
 
+#c2a{
+  width: 45px;
+  height: 45px;
+  padding-bottom: 5px;
+}
+#doacao{
+  padding-top: 50px;
+}
+#content{
+  margin-top: -100px;
+}
 section#contact {
-  background-color: #212529;
-  background-image: url(/images/map-image.png?d59274b4474156836f7c7aa407f5ce32);
-  background-repeat: no-repeat;
-  background-position: center;
+  background-color: #FFFFFF;
+}
+
+section#contact  a{
+  text-decoration: none;
 }
 
 section#contact .section-heading {
