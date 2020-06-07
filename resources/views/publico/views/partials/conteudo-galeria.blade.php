@@ -1,10 +1,17 @@
-@include("publico.views.shared.navigation")
+<nav class="navbar " id="navbarResponsive" style="background-color: #212529;">
+  <a class="navbar-brand" href="#">
+    <img src="/assoc/ABAPP.png" width="30" height="30" alt="">
+  </a>
+
+  <a class="nav-link js-scroll-trigger" href="{{url('/')}}">Voltar</a>
+</nav>
+
 
 <link href="{{'css/app.css'}}" rel="stylesheet" type="text/css">
 <!-- Services -->
 
 
-<div class="container">]
+<div class="container">
 
 @forelse ($galeria as $gal)
 <div class="row text-center">
