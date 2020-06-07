@@ -1,5 +1,4 @@
 <div class="container">
-<img height="100" width="100" src="{{asset($post->imagem)}}" alt=""></div>
 <div class="form-group{{ $errors->has('imagem') ? ' has-error' : '' }}">
     {!! Form::label('imagem', 'imagem', ['class' => 'col-md-2 control-label']) !!}
 

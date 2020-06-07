@@ -86,7 +86,6 @@
       <!-- Call to action -->
       <ul class="list-unstyled list-inline text-center py-2 doe ">
         <h4 class="">Faça parte dessa história! nos ajude crescer cada vez mais. Toda contribuição será bem vinda.</h4>
-
         <h6 class="">Roupas, calçados, alimentos, material de limpeza, roupas de cama, higiene pessoal, brinquedos</h6>
         <div id="doacao">
           <li class="list-inline-item ">

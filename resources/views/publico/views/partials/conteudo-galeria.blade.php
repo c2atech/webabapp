@@ -1,29 +1,38 @@
-@include("publico.views.shared.navigation")
 
-<link href="{{'css/app.css'}}" rel="stylesheet" type="text/css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ABAPP - Associação Beneficente Amor Pelo Próximo</title>
+  <link href="{{'/css/app.css'}}" rel="stylesheet" type="text/css">
+</head>
+<body >
+  
+<!-- Just an image -->
+<nav class="navbar " id="navbarResponsive" style="background-color: #212529;">
+<div class="navbar-galeria container">
+  <a class="navbar-brand "  href="#">
+    <img src="/assoc/ABAPP.png" width="30" height="30" alt="">
+  </a>
+
+  <a class="nav-link js-scroll-trigger" href="{{url('/')}}">Voltar</a>
+  </div>
+</nav>
+
+
+<link href="{{'/css/galeria.css'}}" rel="stylesheet" type="text/css">
 <!-- Services -->
+<div class="row">
+      @forelse ($galeria as $gal)
+      <div class="card-foto">
+      <a href="{{asset($gal->imagem)}}">
+        <img src="{{asset($gal->imagem)}}"></a>
+        <span> <p class="section-heading text-uppercase">{{ $gal->titulo }}</p></span>
+      </div>
+      @empty
+  
+  
+    @endforelse  </div>  
 
-
-<div class="container">]
-
-@forelse ($galeria as $gal)
-<div class="row text-center">
-  <div class="card-deck" width="100px">
-
-    <div class="card mb-4" >
-      <!--  img-fluid dentro da class da imagem para ficar responsivo-->
-      <a href="{{asset($gal->imagem)}}" class="d-block mb-4 h-100">
-        <img height="300" width="300" class="img-fluid img-thumbnail" src="{{asset($gal->imagem)}}" alt="imagem">
-        <div class="card-body">
-          <h6 class="section-heading text-uppercase">Entrega de cestas básicas</h6>
-          <a href="#" class="card-text"><small class="text-muted"></small></a>
-        </div>
-    </div>
-    <!-- /.container -->
-    @empty
-    <tr>
-      <td colspan="5">Não encontrado</td>
-    </tr>
-    @endforelse
-    </div> </div> </div>
-    <script src="{{mix('js/app.js')}}"></script>
+    
