@@ -20,6 +20,7 @@
   </div>
 </nav>
 
+<div class="container">
 
 <link href="{{'/css/galeria.css'}}" rel="stylesheet" type="text/css">
 <!-- Services -->
