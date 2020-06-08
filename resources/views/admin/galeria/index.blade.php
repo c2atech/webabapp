@@ -30,7 +30,7 @@
                                         <td><img height="100" width="100" src="{{asset($gal->imagem)}}" alt=""></td>
                                         <td>{{ $gal->titulo }}</td>
                                         <td>
-                                            <a href="" data-method="DELETE" data-token="{{ csrf_token() }}" data-confirm="Are you sure?" class="btn btn-xs btn-danger">Deletar</a>
+                                        <a href="{{ url("/admin/galeria/{$gal->id}") }}" data-method="DELETE" data-token="{{ csrf_token() }}" data-confirm="Are you sure?" class="btn btn-xs btn-danger">Deletar</a>
                                         </td>
                                     </tr>
                                 @empty

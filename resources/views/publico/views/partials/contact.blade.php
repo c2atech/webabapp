@@ -50,39 +50,21 @@
           </div>
 
           <ul class="list-unstyled list-inline text-center py-2 doe ">
-              <h4 class="subheading">Faça parte dessa história! nos ajude crescer cada vez mais. Toda contribuição será bem vinda.</h4>
+            <h4 class="subheading">Faça parte dessa história! nos ajude crescer cada vez mais. Toda contribuição será bem vinda.</h4>
 
-              <h3 class="section-subheading text-muted">Roupas, calçados, alimentos, material de limpeza, roupas de cama, higiene pessoal, brinquedos</h3>
-              <span id="doacao">
-                <li class="list-inline-item ">
-                  <h5 class="mb-6">Faça já a sua </h5>
-                </li>
-                <li class="list-inline-item">
-                  <a class="portfolio-link btn btn-primary btn-md" data-toggle="modal" href="#doacaomodal">Doação </a>
-                </li>
-              </span>
-            </ul>
+            <h3 class="section-subheading text-muted">Roupas, calçados, alimentos, material de limpeza, roupas de cama, higiene pessoal, brinquedos</h3>
+            <span id="doacao">
+              <li class="list-inline-item ">
+                <h5 class="mb-6">Faça já a sua </h5>
+              </li>
+              <li class="list-inline-item">
+                <a class="portfolio-link btn btn-primary btn-md" data-toggle="modal" href="#doacaomodal">Doação </a>
+              </li>
+            </span>
+          </ul>
 
-          </div>
-
-<<<<<<< HEAD
-      <!-- Call to action -->
-      <ul class="list-unstyled list-inline text-center py-2 doe ">
-        <h4 class="">Faça parte dessa história! nos ajude crescer cada vez mais. Toda contribuição será bem vinda.</h4>
-        <h6 class="">Roupas, calçados, alimentos, material de limpeza, roupas de cama, higiene pessoal, brinquedos</h6>
-        <div id="doacao">
-          <li class="list-inline-item ">
-            <h5 class="mb-6">Faça já a sua </h5>
-          </li>
-          <li class="list-inline-item">
-            <a data-toggle="modal" href="#doacao" class="btn btn-success btn-rounded">Doação!</a>
-          </li>
-      </ul>
-=======
         </div>
-
       </div>
->>>>>>> 069e9af89ed4c828c892e421c970063bc5bc8909
     </div>
   </div>
-</section>
+  </div>
