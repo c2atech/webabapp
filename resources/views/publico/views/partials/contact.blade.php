@@ -1,5 +1,5 @@
 <!-- Contact -->
-<section id="contact">
+<section class="bg-light" id="contact">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
@@ -40,7 +40,7 @@
           <div class="col col-lg-3 col-md-auto ">
             <h5 class="font-weight-bold text-uppercase ">Social</h5>
             <p class="section-subheading text-muted">
-              <i class="fa fa-whatsapp"> <a href="https://api.whatsapp.com/send?phone=5594992885831&text=Oi,%20tudo%20bem?">(94) 99288-5831</a></i>
+              <i class="fa fa-whatsapp"></i> <a href="https://api.whatsapp.com/send?phone=5594992885831&text=Oi,%20tudo%20bem?">Whatsapp</a>
               <br> <i class="fa fa-facebook"></i>
               <a href="https://www.facebook.com/copaguilherme.beneficente.1">Facebook</a>
               <br> <i class="fa fa-instagram"></i>
@@ -65,24 +65,9 @@
 
           </div>
 
-<<<<<<< HEAD
-      <!-- Call to action -->
-      <ul class="list-unstyled list-inline text-center py-2 doe ">
-        <h4 class="">Faça parte dessa história! nos ajude crescer cada vez mais. Toda contribuição será bem vinda.</h4>
-        <h6 class="">Roupas, calçados, alimentos, material de limpeza, roupas de cama, higiene pessoal, brinquedos</h6>
-        <div id="doacao">
-          <li class="list-inline-item ">
-            <h5 class="mb-6">Faça já a sua </h5>
-          </li>
-          <li class="list-inline-item">
-            <a data-toggle="modal" href="#doacao" class="btn btn-success btn-rounded">Doação!</a>
-          </li>
-      </ul>
-=======
         </div>
 
       </div>
->>>>>>> 069e9af89ed4c828c892e421c970063bc5bc8909
     </div>
   </div>
 </section>

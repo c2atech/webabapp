@@ -1,7 +1,7 @@
 @push('doc_end')
 
 <!-- Noticias -->
-<section class="page-section" id="noticias">
+<section class="bg-light" id="noticias">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">

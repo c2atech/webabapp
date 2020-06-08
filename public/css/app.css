@@ -3224,13 +3224,13 @@ sup {
 }
 
 a {
-  color: #fed136;
+  color: #003f26;
   text-decoration: none;
   background-color: transparent;
 }
 
 a:hover {
-  color: #e6b301;
+  color: rgb(4, 172, 40);
   text-decoration: underline;
 }
 
@@ -6176,22 +6176,22 @@ fieldset:disabled a.btn {
 }
 
 .btn-primary {
-  color: #212529;
-  background-color: #fed136;
-  border-color: #fed136;
+  color: white;
+  background-color: #002114;
+  border-color: white;
 }
 
 .btn-primary:hover {
-  color: #212529;
-  background-color: #fec810;
-  border-color: #fec503;
+  color: white;
+  background-color: #002114;
+  border-color: white;
 }
 
 .btn-primary:focus,
 .btn-primary.focus {
-  color: #212529;
-  background-color: #fec810;
-  border-color: #fec503;
+  color: white;
+  background-color: white;
+  border-color: #002114;
   -webkit-box-shadow: 0 0 0 0.2rem rgba(221, 183, 52, 0.5);
           box-shadow: 0 0 0 0.2rem rgba(221, 183, 52, 0.5);
 }
@@ -15048,13 +15048,7 @@ p {
   line-height: 1.75;
 }
 
-a {
-  color: #fed136;
-}
 
-a:hover {
-  color: #fec503;
-}
 
 .text-primary {
   color: #fed136 !important;
@@ -15105,18 +15099,16 @@ section h3.section-subheading {
   padding: 20px 40px;
 }
 
-.btn-primary {
-  background-color: #fed136;
-  border-color: #fed136;
-}
 
 .btn-primary:active,
 .btn-primary:focus,
 .btn-primary:hover {
-  background-color: #fec810 !important;
-  border-color: #fec810 !important;
-  color: white;
+  background-color: #fdfdfc !important;
+  border-color: #002114 !important;
+  color: #002114;
 }
+
+
 
 .btn-primary:active,
 .btn-primary:focus {
@@ -15161,12 +15153,12 @@ body {
   text-transform: uppercase;
   color: white;
   border: 0;
-  background-color: #fed136;
+  background-color: #023a23 ;
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 #mainNav .navbar-brand {
-  color: #fed136;
+  color: #10ac17;
   font-family: 'Kaushan Script', 'Helvetica Neue', Helvetica, Arial, cursive;
 }
 
@@ -15188,7 +15180,7 @@ body {
 
 #mainNav .navbar-nav .nav-item .nav-link.active,
 #mainNav .navbar-nav .nav-item .nav-link:hover {
-  color: #fed136;
+  color: #10ac17;
 }
 
 @media (min-width: 992px) {
@@ -15226,7 +15218,7 @@ body {
 header.masthead {
   text-align: center;
   color: white;
-  background-image: url(/images/capa.jpeg?9f3c1cd054a59c493ffb820fc5cf870a);
+  background-image: url(/images/header-bg.jpg?9f3c1cd054a59c493ffb820fc5cf870a);
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -15302,7 +15294,7 @@ header.masthead .intro-text .intro-heading {
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
   opacity: 0;
-  background: rgba(254, 209, 54, 0.9);
+  background: #002114 ;
 }
 
 #portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
@@ -15505,7 +15497,7 @@ header.masthead .intro-text .intro-heading {
   color: white;
   border: 7px solid #e9ecef;
   border-radius: 100%;
-  background-color: #fed136;
+  background-color: azure;
 }
 
 .timeline > li .timeline-image h4 {
