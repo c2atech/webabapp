@@ -31,7 +31,6 @@ Route::get('/publico/posts', 'Admin\PostController@lpostagens');
 Route::get('adm/galeria/form', 'Admin\GaleriaController@form');
 Route::resource('admin/galeria', 'Admin\GaleriaController');
 
-
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'auth'], function() {
     Route::resource('/posts', 'PostController');
     Route::put('/posts/{post}/publish', 'PostController@publish')->middleware('admin');

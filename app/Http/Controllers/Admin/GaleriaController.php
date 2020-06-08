@@ -15,15 +15,15 @@ class GaleriaController extends Controller
      */
     public function index()
     {
-        
+
 
         $galeria = Galeria::orderBy('id', 'DESC')->paginate(10);
-      
-        return view('admin.galeria.index',compact('galeria'));
+
+        return view('admin.galeria.index', compact('galeria'));
     }
 
     public function form()
-     {
+    {
         return view('admin.galeria.create-galeria');
     }
 
@@ -108,6 +108,15 @@ class GaleriaController extends Controller
      */
     public function destroy($id)
     {
-        //
+       $galeria = Galeria::find($id);
+
+       $delete= $galeria->delete();
+
+       if($delete){
+           return redirect('admin/galeria');
+       }
+       else{
+           return redirect('admin/galeria')->with(['errors' => 'Falha ao deletar']);
+       }
     }
 }

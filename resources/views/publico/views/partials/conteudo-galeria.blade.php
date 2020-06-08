@@ -33,7 +33,8 @@
       </div>
       @empty
   
+    @endforelse 
+    {!! $galeria->links() !!} </div>  
   
-    @endforelse  </div>  
 
     

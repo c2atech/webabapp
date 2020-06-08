@@ -3,8 +3,8 @@
       <div class="container">
       <div class="row">
       <div class="col-lg-12 text-center">
-        <h3 class="section-heading text-uppercase">Patrocinadores</h3>
-        <h3 class="section-subheading text-muted">A associação Beneficente Amor Pelo Próximo agradece a cada um dos nossos patrocinadores.</h3>
+        <h2 class="section-heading text-uppercase">Apoiadores</h2>
+        <h3 class="section-subheading text-muted">A Associação Beneficente Amor Pelo Próximo agradece a cada um dos nossos patrocinadores.</h3>
       </div>
     </div>
         <div class="row">
