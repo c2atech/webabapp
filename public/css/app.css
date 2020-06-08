@@ -8191,7 +8191,7 @@ input[type="button"].btn-block {
   padding: 0.25rem 0.75rem;
   font-size: 1.25rem;
   line-height: 1;
-  background-color: transparent;
+  background-color: black;
   border: 1px solid transparent;
   border-radius: 0.25rem;
 }
@@ -15226,7 +15226,7 @@ body {
 header.masthead {
   text-align: center;
   color: white;
-  background-image: url(/images/capa.jpeg?9f3c1cd054a59c493ffb820fc5cf870a);
+  background-image: url(/images/capa.jpg?9f3c1cd054a59c493ffb820fc5cf870a);
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
