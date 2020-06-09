@@ -29,7 +29,7 @@
                                         <td>{{ $comment->post->title }}</td>
                                         <td>{{ $comment->body }}</td>
                                         <td>
-                                            <a href="{{ url("/admin/comments/{$comment->id}") }}" data-method="DELETE" data-token="{{ csrf_token() }}" data-confirm="Are you sure?" class="btn btn-xs btn-danger">Deletar</a>
+                                            <a href="{{ url("/admin/comments/{$comment->id}") }}" data-method="DELETE" data-token="{{ csrf_token() }}" data-confirm="Quer mesmo deletar este comentário/" class="btn btn-xs btn-danger">Deletar</a>
                                         </td>
                                     </tr>
                                 @empty

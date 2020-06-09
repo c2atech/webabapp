@@ -30,7 +30,7 @@
                                         <td>{{ $category->posts_count }}</td>
                                         <td>
                                             <a href="{{ url("/admin/categories/{$category->id}/edit") }}" class="btn btn-xs btn-info">Edit</a>
-                                            <a href="{{ url("/admin/categories/{$category->id}") }}" data-method="DELETE" data-token="{{ csrf_token() }}" data-confirm="Are you sure?" class="btn btn-xs btn-danger">Delete</a>
+                                            <a href="{{ url("/admin/categories/{$category->id}") }}" data-method="DELETE" data-token="{{ csrf_token() }}" data-confirm="Quer mesmo deletar essa categoria/" class="btn btn-xs btn-danger">Delete</a>
                                         </td>
                                     </tr>
                                 @empty
