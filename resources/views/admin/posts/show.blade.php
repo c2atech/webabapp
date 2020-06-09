@@ -12,7 +12,7 @@
                         <h2>
                             {{ $post->title }} <small>por {{ $post->user->name }}</small>
 
-                            <a href="{{ url('admin/posts') }}" class="btn btn-default pull-right">Voltar</a>
+                            <a href="{{ url('admin/posts') }}" class="btn btn-success btn-default pull-right">Voltar</a>
                         </h2>
                     </div>
 

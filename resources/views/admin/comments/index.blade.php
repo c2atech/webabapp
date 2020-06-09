@@ -10,7 +10,7 @@
                         <h2>
                            Comentários
 
-                            <a href="{{ url('admin/comments/create') }}" class="btn btn-default pull-right">Comentar</a>
+                            <a href="{{ url('admin/comments/create') }}" class="btn btn-success btn-default pull-right">Comentar</a>
                         </h2>
                     </div>
 

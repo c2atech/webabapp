@@ -10,7 +10,7 @@
                         <h2>
                             Tags
 
-                            <a href="{{ url('admin/tags/create') }}" class="btn btn-default pull-right">Criar Nova</a>
+                            <a href="{{ url('admin/tags/create') }}" class="btn btn-success btn-default pull-right">Criar Nova</a>
                         </h2>
                     </div>
 

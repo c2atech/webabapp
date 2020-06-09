@@ -10,7 +10,7 @@
                         <h2>
                             Criar categoria
 
-                            <a href="{{ url('admin/categories') }}" class="btn btn-default pull-right">Voltar</a>
+                            <a href="{{ url('admin/categories') }}" class="btn btn-success btn-default pull-right">Voltar</a>
                         </h2>
                     </div>
 

@@ -11,7 +11,7 @@
                     <h2>
                         Adicionar Imagem
 
-                        <a href="{{ url('admin/home') }}" class="btn btn-default pull-right">voltar</a>
+                        <a href="{{ url('admin/home') }}" class="btn btn-success btn-default pull-right">voltar</a>
                     </h2>
                 </div>
                 {!! Form::open(['url' => 'admin/galeria', 'class' => 'form-horizontal', 'role' => 'form', 'enctype' => 'multipart/form-data']) !!}

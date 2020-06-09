@@ -10,7 +10,7 @@
                         <h2>
                            Editar tag
 
-                            <a href="{{ url('admin/tags') }}" class="btn btn-default pull-right">Voltar</a>
+                            <a href="{{ url('admin/tags') }}" class="btn  btn-success btn-default pull-right">Voltar</a>
                         </h2>
                     </div>
 

@@ -10,7 +10,7 @@
                         <h2>
                             Criar Postagem
 
-                            <a href="{{ url('admin/posts') }}" class="btn btn-default pull-right">voltar</a>
+                            <a href="{{ url('admin/posts') }}" class="btn btn-success btn-default pull-right">voltar</a>
                         </h2>
                     </div>
 

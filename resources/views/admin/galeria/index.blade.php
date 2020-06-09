@@ -11,7 +11,7 @@
                         <h2>
                          Galeria de Fotos
 
-                            <a href="{{ url('adm/galeria/form') }}" class="btn btn-default pull-right">Adicionar Imagem</a>
+                            <a href="{{ url('adm/galeria/form') }}" class="btn btn-success btn-default pull-right">Adicionar Imagem</a>
                         </h2>
                     </div>
 
