@@ -15,6 +15,7 @@
 Route::get('/', 'publicController@index');
 Route::get('/galeria', 'publicController@galeria');
 Route::get('adm/galeria', 'Admin\GaleriaController@index');
+Route::get('admin/galeria/', 'Admin\GaleriaController@destroy');
 Route::get('conteudo/posts/{post}', 'PublicController@conteudop');
 
 

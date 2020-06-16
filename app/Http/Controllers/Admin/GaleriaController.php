@@ -108,6 +108,14 @@ class GaleriaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        if ($gal->user_id != auth()->user()->id && auth()->user()->is_admin == false) {
+            flash()->overlay("Falha ao apagar a postagem");
+            return view('/admin/galeria/index');
+        }
+
+        $gal->delete();
+        flash()->overlay('Postagem excluida com secesso');
+
+        return view('/admin/galeria/index');
     }
 }
