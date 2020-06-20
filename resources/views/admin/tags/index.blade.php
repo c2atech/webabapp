@@ -10,7 +10,7 @@
                         <h2>
                             Tags
 
-                            <a href="{{ url('admin/tags/create') }}" class="btn btn-default pull-right">Criar Nova</a>
+                            <a href="{{ url('admin/tags/create') }}" class="btn btn-success btn-default pull-right">Criar Nova</a>
                         </h2>
                     </div>
 
@@ -28,7 +28,7 @@
                                         <td>{{ $tag->name }}</td>
                                         <td>
                                             <a href="{{ url("/admin/tags/{$tag->id}/edit") }}" class="btn btn-xs btn-info">Editar</a>
-                                            <a href="{{ url("/admin/tags/{$tag->id}") }}" data-method="DELETE" data-token="{{ csrf_token() }}" data-confirm="Are you sure?" class="btn btn-xs btn-danger">Deletar</a>
+                                            <a href="{{ url("/admin/tags/{$tag->id}") }}" data-method="DELETE" data-token="{{ csrf_token() }}" data-confirm="Quer mesmo deletar esta TAg/?" class="btn btn-xs btn-danger">Deletar</a>
                                         </td>
                                     </tr>
                                 @empty

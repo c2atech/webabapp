@@ -82,7 +82,7 @@ class PostController extends Controller
     public function lpostagens(Post $post)
     {
         $post = $post->load(['user', 'category', 'tags', 'comments']);
-      
+
         return view('publico.views.partials.conteudo-noticia', compact('post'));
     }
 
@@ -112,25 +112,28 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(PostRequest $request, Post $post)
+    public function update(Request $request, $id)
     {
-        // disbust cache
-        Cache::forget($post->etag);
+        $dados = Post::find($id);
 
-        $post->update([
-            'title'       => $request->title,
-            'body'        => $request->body,
-            'category_id' => $request->category_id
-        ]);
+        $dados->title = $request->input('title');
+        $dados->body = $request->input('body');
+        $dados->category_id = $request->input('category_id');
 
-        $tagsId = collect($request->tags)->map(function ($tag) {
-            return Tag::firstOrCreate(['name' => $tag])->id;
-        });
+        
+        //tratando a imagem
+        if ($request->hasFile('imagem')) {
+            $imagem = $request->file('imagem');
 
-        $post->tags()->sync($tagsId);
-        flash()->overlay('Post updated successfully.');
+            $num = rand(1111, 2222);   //gerando um numero randomico para servir como nome da imagem no banco de dados
+            $extensao = $imagem->guessClientExtension();  //extensao da imagem
+            $nomeimagem = "imagem_" . $num . "." . $extensao;   //nome da imagem
+            $imagem->move('img/postagem', $nomeimagem);     //movendo imagem para um diretorio
+            $dados->imagem = $nomeimagem;//caminho da imagem para salvar no banco
+        }
 
-        return redirect('/admin/posts');
+        $dados->save();
+        return redirect('/admin/posts')->with('dados', $dados);
     }
 
     /**
@@ -142,12 +145,12 @@ class PostController extends Controller
     public function destroy(Post $post)
     {
         if ($post->user_id != auth()->user()->id && auth()->user()->is_admin == false) {
-            flash()->overlay("You can't delete other peoples post.");
+            flash()->overlay("Você quer mesmo deletar essa postagem?");
             return redirect('/admin/posts');
         }
 
         $post->delete();
-        flash()->overlay('Post deleted successfully.');
+        flash()->overlay('A Postagem foi deletada com sucesso');
 
         return redirect('/admin/posts');
     }

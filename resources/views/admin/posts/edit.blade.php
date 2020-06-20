@@ -9,7 +9,7 @@
                     <div class="panel-heading">
                         <h2>
                             Editar Postagem
-                            <a href="{{ url('admin/posts') }}" class="btn btn-default pull-right">Voltar</a>
+                            <a href="{{ url('admin/posts') }}" class="btn btn-success btn-default pull-right">Voltar</a>
                         </h2>
                     </div>
 

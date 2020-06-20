@@ -11,7 +11,7 @@
                         <h2>
                          Galeria de Fotos
 
-                            <a href="{{ url('adm/galeria/form') }}" class="btn btn-default pull-right">Adicionar Imagem</a>
+                            <a href="{{ url('adm/galeria/form') }}" class="btn btn-success btn-default pull-right">Adicionar Imagem</a>
                         </h2>
                     </div>
 
@@ -30,7 +30,11 @@
                                         <td><img height="100" width="100" src="{{asset($gal->imagem)}}" alt=""></td>
                                         <td>{{ $gal->titulo }}</td>
                                         <td>
+<<<<<<< HEAD
                                             <a href=""{{ url("admin/galeria/{$gal6->id}") }}" data-method="DELETE" data-token="{{ csrf_token() }}" data-confirm="Are you sure?" class="btn btn-xs btn-danger">Deletar</a>
+=======
+                                        <a href="{{ url("/admin/galeria/{$gal->id}") }}" data-method="DELETE" data-token="{{ csrf_token() }}" data-confirm="Quer mesmo deletar essa foto/" class="btn btn-xs btn-danger">Deletar</a>
+>>>>>>> 5211173eec083c8e5eea0cd423c9630692fa9c09
                                         </td>
                                     </tr>
                                 @empty

@@ -1,11 +1,4 @@
-
-@php
-    if(isset($post)) {
-        $tag = $post->imagem->pluck('name')->all();
-    } else {
-        $tag = null;
-    }
-@endphp
+<div class="container">
 <div class="form-group{{ $errors->has('imagem') ? ' has-error' : '' }}">
     {!! Form::label('imagem', 'imagem', ['class' => 'col-md-2 control-label']) !!}
 

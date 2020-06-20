@@ -28,7 +28,10 @@
               <a class="nav-link js-scroll-trigger" href="#team">Diretoria</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">Contato</a>
+              <a class="nav-link js-scroll-trigger" href="#patrocinadores">Apoiadores</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Doações</a>
             </li> 
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="/login">Entrar</a>

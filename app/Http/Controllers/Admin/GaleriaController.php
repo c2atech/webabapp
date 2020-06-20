@@ -15,15 +15,15 @@ class GaleriaController extends Controller
      */
     public function index()
     {
-        
+
 
         $galeria = Galeria::orderBy('id', 'DESC')->paginate(10);
-      
-        return view('admin.galeria.index',compact('galeria'));
+
+        return view('admin.galeria.index', compact('galeria'));
     }
 
     public function form()
-     {
+    {
         return view('admin.galeria.create-galeria');
     }
 
@@ -63,7 +63,7 @@ class GaleriaController extends Controller
         Galeria::create($dados); //salvando tudo no banco de dados
 
 
-        return view('/admin/galeria/index');
+        return redirect('adm/galeria');
     }
 
     /**
@@ -108,14 +108,15 @@ class GaleriaController extends Controller
      */
     public function destroy($id)
     {
-        if ($gal->user_id != auth()->user()->id && auth()->user()->is_admin == false) {
-            flash()->overlay("Falha ao apagar a postagem");
-            return view('/admin/galeria/index');
-        }
+       $galeria = Galeria::find($id);
 
-        $gal->delete();
-        flash()->overlay('Postagem excluida com secesso');
+       $delete= $galeria->delete();
 
-        return view('/admin/galeria/index');
+       if($delete){
+           return redirect('admin/galeria');
+       }
+       else{
+           return redirect('admin/galeria')->with(['errors' => 'Falha ao deletar']);
+       }
     }
 }

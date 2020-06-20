@@ -31,7 +31,7 @@
                                         <td>{{ ($user->is_admin)?'Yes':'No' }}</td>
                                         <td>{{ $user->posts_count }}</td>
                                         <td>
-                                            <a href="{{ url("/admin/users/{$user->id}") }}" data-method="DELETE" data-token="{{ csrf_token() }}" data-confirm="Are you sure?" class="btn btn-xs btn-danger">Deletar</a>
+                                            <a href="{{ url("/admin/users/{$user->id}") }}" data-method="DELETE" data-token="{{ csrf_token() }}" data-confirm="Quer mesmo deletar esse usuário?" class="btn btn-xs btn-danger">Deletar</a>
                                         </td>
                                     </tr>
                                 @empty

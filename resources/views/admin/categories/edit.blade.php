@@ -10,7 +10,7 @@
                         <h2>
                            Editar categoria
 
-                            <a href="{{ url('admin/categories') }}" class="btn btn-default pull-right">voltar</a>
+                            <a href="{{ url('admin/categories') }}" class="btn btn-success btn-default pull-right">voltar</a>
                         </h2>
                     </div>
 

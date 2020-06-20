@@ -25,15 +25,15 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/home') }}">
-                    <b> Portal do ADM</b>
+                <a class="navbar-brand" href="{{ url('admin') }}">
+                    <b> Home</b>
                 </a>
 
                 @guest
                 @if (Route::has('register'))
                 @endif
                 @else
-                <a href="{{ url('/') }}" >Início</a>
+                <a href="{{ url('/') }}">Início</a>
                 <a href="{{route('posts.index')}}">Postagens</a>
                 @endguest
 

@@ -31,6 +31,7 @@
             <ul class="list-inline quicklinks">
               <li class="list-inline-item">
               Desenvolvido por <a href="www.c2atech.com.br"><b>C2A Tech&reg;</b></a>
+              <img src="assoc/Logo PNG.png" id="c2a" class="d-inline-block align-top" alt="">
               </li>
             </ul>
           </div>

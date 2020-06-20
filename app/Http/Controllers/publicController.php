@@ -23,7 +23,7 @@ class publicController extends Controller
 
     public function galeria()
     {
-        $galeria = Galeria::orderBy('id', 'DESC')->paginate(10);
+        $galeria = Galeria::orderBy('id', 'DESC')->paginate(9);
         return view('publico.views.partials.conteudo-galeria', compact('galeria'));
     }
 }

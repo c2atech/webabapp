@@ -1,7 +1,7 @@
 @push('doc_end')
 
 <!-- Noticias -->
-<section class="page-section" id="noticias">
+<section class="bg-light" id="noticias">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
@@ -12,6 +12,7 @@
 
     <div class="row">
       @forelse ($posts as $post)
+ 
       <div class="col mb-4 col-sm-10 col-md-6 col-lg-4">
         <img src="{{asset($post->imagem)}}" width="350" height="200">
 
@@ -28,6 +29,7 @@
       @empty
     </div>
     @endforelse
+   
 
 
   </div>

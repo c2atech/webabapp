@@ -120,7 +120,7 @@
           </div>
           <div class="col-sm-4">
             <div class="team-member">
-              <img class="mx-auto rounded-circle" src="assoc/team/jhon .jpeg" alt="">
+            <img class="mx-auto rounded-circle" src="assoc/team/Jhond.jpeg" alt=""> 
               <h4>Jhon Douglas</h4>
               <p class="text-muted">2º Secretário</p>
               <ul class="list-inline social-buttons">
