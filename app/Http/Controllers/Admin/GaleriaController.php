@@ -15,8 +15,6 @@ class GaleriaController extends Controller
      */
     public function index()
     {
-
-
         $galeria = Galeria::orderBy('id', 'DESC')->paginate(10);
 
         return view('admin.galeria.index', compact('galeria'));
